@@ -32,6 +32,7 @@ class _WelcomeState extends State<Welcome> {
               alignment: Alignment.topCenter,
               children: [
                 PageView(
+                  controller: pageController,
                   onPageChanged: (index) {
                     state.page = index;
                     BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
@@ -148,7 +149,7 @@ class _WelcomeState extends State<Welcome> {
                       color: Colors.grey.withOpacity(0.1),
                       spreadRadius: 1,
                       blurRadius: 2,
-                      offset: Offset(0, 1))
+                      offset: const Offset(0, 1))
                 ]),
             child: Center(
               child: Text(
