@@ -76,12 +76,12 @@ class _RegisterState extends State<Register> {
                   ),
                   Container(
                       margin: EdgeInsets.only(left: 25.w),
-                      width: 25.h,
+                      //width: 25.h,
                       child: reusableText(
                           "By creating an account you have to agree with our terms and condition")),
                   buildLoginAndRegButton("Sign Up", "login", () {
                     //Navigator.of(context).pushNamed("register");
-                    RegisterController(context:context).handleEmailRegister();
+                    RegisterController(context: context).handleEmailRegister();
                   }),
                 ],
               ),
