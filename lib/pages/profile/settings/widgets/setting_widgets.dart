@@ -33,7 +33,9 @@ Widget settingsButton(BuildContext context, void Function()? func) {
           });
     },
     child: Container(
-      width: 100.w,
+      margin: EdgeInsets.only(left: 120.w, top: 10.h),
+      width: 120.w,
+      height: 80.h,
       decoration: const BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.fitHeight,

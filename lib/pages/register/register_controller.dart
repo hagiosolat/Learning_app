@@ -43,6 +43,7 @@ class RegisterController {
         toastInfo(
             msg:
                 'An email has been sent to your registered email. To activate it please check your email box and click on the link');
+        // ignore: use_build_context_synchronously
         Navigator.of(context).pop();
       }
     } on FirebaseAuthException catch (e) {

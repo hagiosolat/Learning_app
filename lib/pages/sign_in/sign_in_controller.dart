@@ -45,9 +45,10 @@ class SignInController {
           var user = credential.user;
           if (user != null) {
             //we got verified from the firebase
-            print("user exist");
+            // print("user exist");
             Global.storageService
-                .setString(AppConstants.STORAGE_USER_TOKEN_KEY , "12345678");
+                .setString(AppConstants.STORAGE_USER_TOKEN_KEY, "12345678");
+            // ignore: use_build_context_synchronously
             Navigator.of(context)
                 .pushNamedAndRemoveUntil("/application", (route) => false);
           } else {
@@ -57,13 +58,13 @@ class SignInController {
           }
         } on FirebaseAuthException catch (e) {
           if (e.code == 'user-not-found') {
-            print('No user found for that email.');
+            //print('No user found for that email.');
             toastInfo(msg: "No user found for this eamail");
           } else if (e.code == 'wrong-password') {
-            print('Wrong password provided for that user');
+            // print('Wrong password provided for that user');
             toastInfo(msg: "Wrong password provided for that user");
           } else if (e.code == 'invalid-email') {
-            print('Your email format is wrong');
+            // print('Your email format is wrong');
             toastInfo(msg: "Your email address format is wrong");
           }
         }
